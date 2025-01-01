@@ -1,0 +1,10 @@
+services:
+  web:
+    image: nginx
+    volumes:
+      - build:/usr/share/nginx/html:ro
+    networks:
+      - nginxmanager_proxy
+networks:
+  nginxmanager_proxy:
+    external: true
